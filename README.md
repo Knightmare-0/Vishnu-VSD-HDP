@@ -27,6 +27,9 @@ $ make
 $ sudo make install
 ```
 
+![yosys](https://user-images.githubusercontent.com/112769624/236633099-02d75838-aa08-46c7-b303-7905add62979.png)
+
+
 
 ### OpenSTA
 *To install cmake for 18.04 (if not present)*
