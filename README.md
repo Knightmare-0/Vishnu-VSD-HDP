@@ -1,17 +1,6 @@
 # Vishnu-VSD-HDP
 # VSD-HDP Status
 
-Progress Quick-Link:<br />
-[Day 1](#Day_1)<br />
-[Day 2](#Day_2)<br />
-[Day 3](#Day_3)<br />
-[Day 4](#Day_4)<br />
-[Day 5](#Day_5)<br />
-[Day 6](#Day_6)<br />
-[Day 7](#Day_7)<br />
-[Day 8](#Day_8)<br />
-
-
 ## Day_0
 *Before installing run the command below*
 ```
