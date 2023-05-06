@@ -26,7 +26,7 @@ $ sudo apt-get install build-essential clang bison flex \
 $ make 
 $ sudo make install
 ```
-![Screenshot from 2023-02-18 09-51-15](https://user-images.githubusercontent.com/83526493/219851718-059c8120-a14f-41fa-a86a-e9054f8a23ba.png)
+![Screenshot from 2023-05-06 20-48-02](https://user-images.githubusercontent.com/112769624/236632920-b477b914-0c81-42b7-b55e-7263f86e5500.png)
 
 ### OpenSTA
 *To install cmake for 18.04 (if not present)*
