@@ -59,8 +59,8 @@ $ make
 * Download ngspice-37.tar.gz from old releases parent folder from
 (https://sourceforge.net/projects/ngspice/files/)
 ```
-$ tar -zxvf ngspice-37.tar.gz
-$ cd ngspice-37
+$ tar -zxvf ngspice-40.tar.gz
+$ cd ngspice-40
 $ mkdir release
 $ cd release
 $ ../configure  --with-x --with-readline=yes --disable-debug
