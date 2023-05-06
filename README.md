@@ -52,7 +52,8 @@ $ cd build
 $ cmake ..
 $ make
 ```
-![Screenshot from 2023-02-18 10-24-48](https://user-images.githubusercontent.com/83526493/219851603-8e197286-ee63-43bd-8067-5c58f93f95f8.png)
+![sta](https://user-images.githubusercontent.com/112769624/236634039-9f27788e-8a0f-4f94-94f3-f5ba59ed7f3a.png)
+
 
 ### ngspice
 * Download ngspice-37.tar.gz from old releases parent folder from
