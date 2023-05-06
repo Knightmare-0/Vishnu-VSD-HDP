@@ -67,7 +67,8 @@ $ ../configure  --with-x --with-readline=yes --disable-debug
 $ make
 $ sudo make install
 ```
-![Screenshot from 2023-02-18 09-51-56](https://user-images.githubusercontent.com/83526493/219851683-58c7479c-eba6-4b24-89dd-c0f3dcaebbca.png)
+![ngspice](https://user-images.githubusercontent.com/112769624/236634603-e17ae7a4-9e6a-4ec5-bd67-8898ae467085.png)
+
 
 ### iverilog
 ```
