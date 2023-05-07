@@ -159,3 +159,29 @@ endmodule
 *gtkwave output*
 ![day1-1](https://user-images.githubusercontent.com/112769624/236661094-f39ac58d-214e-4938-9e4c-ff875f46e0d8.png)
 
+### Mux suynthesys to gatelevel 
+
+*yosys flow*
+![yosys_flow](https://user-images.githubusercontent.com/112769624/236665087-54638e48-cd2e-4f09-bc2e-1b81182186b0.png)
+
+*commands for synthesis *
+```
+yosys> read_liberty -lib /home/knightmare/vlsi/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+yosys> read_verilog /home/knightmare/vlsi/sky130RTLDesignAndSynthesisWorkshop//verilog_files/good_mux.v
+yosys> synth -top good_mux 
+yosys> abc -liberty /home/knightmare/vlsi/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+yosys> show
+```
+![procedure](https://user-images.githubusercontent.com/112769624/236665583-82ad8f8b-6bf1-4468-8e57-00c9cddfe41a.png)
+
+*ABC results*
+
+![yosys mux res](https://user-images.githubusercontent.com/112769624/236665606-99faab73-96f4-405d-a504-7410652ffbd6.png)
+
+*MUX Netlist*
+
+![mux_netlist](https://user-images.githubusercontent.com/112769624/236665640-d33d6f90-632a-4419-a930-d3d16a1b85b2.png)
+
+
+
+
