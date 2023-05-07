@@ -89,3 +89,71 @@ $   sudo apt-get install libcairo2-dev
 $   sudo apt-get install mesa-common-dev libglu1-mesa-dev
 $   sudo apt-get install libncurses-dev
 ```
+##Day_1
+
+### Good MUX design and testbench
+
+'Presequisites'
+```
+$ sudo apt install vim-gtk3
+'commands'
+```
+$ gvim good_mux.v tb_good_mux.v
+$ gedit good_mux.v tb_good_mux.v
+$ iverilog good_mux.v tb_good_mux.v
+$ ls
+$ ./a.out
+$ gtkwave tb_good_mux.v
+
+```
+```
+'MUX design'
+
+```
+module good_mux (input i0 , input i1 , input sel , output reg y);
+always @ (*)
+begin
+	if(sel)
+		y <= i1;
+	else 
+		y <= i0;
+end
+endmodule
+```
+
+'MUX testbench'
+
+```
+`timescale 1ns / 1ps
+module tb_good_mux;
+	// Inputs
+	reg i0,i1,sel;
+	// Outputs
+	wire y;
+
+        // Instantiate the Unit Under Test (UUT)
+	good_mux uut (
+		.sel(sel),
+		.i0(i0),
+		.i1(i1),
+		.y(y)
+	);
+
+	initial begin
+	$dumpfile("tb_good_mux.vcd");
+	$dumpvars(0,tb_good_mux);
+	// Initialize Inputs
+	sel = 0;
+	i0 = 0;
+	i1 = 0;
+	#300 $finish;
+	end
+
+always #75 sel = ~sel;
+always #10 i0 = ~i0;
+always #55 i1 = ~i1;
+endmodule
+```
+'gtkwave output'
+![day1-1](https://user-images.githubusercontent.com/112769624/236661094-f39ac58d-214e-4938-9e4c-ff875f46e0d8.png)
+
