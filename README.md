@@ -98,6 +98,7 @@ $   sudo apt-get install libncurses-dev
 $ sudo apt install vim-gtk3
 ```
 *commands*
+```
 $ gvim good_mux.v tb_good_mux.v
 $ gedit good_mux.v tb_good_mux.v
 $ iverilog good_mux.v tb_good_mux.v
@@ -105,7 +106,6 @@ $ ls
 $ ./a.out
 $ gtkwave tb_good_mux.v
 
-```
 ```
 *MUX design*
 
