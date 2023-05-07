@@ -93,11 +93,11 @@ $   sudo apt-get install libncurses-dev
 
 ### Good MUX design and testbench
 
-'Presequisites'
+*Presequisites*
 ```
 $ sudo apt install vim-gtk3
-'commands'
 ```
+*commands*
 $ gvim good_mux.v tb_good_mux.v
 $ gedit good_mux.v tb_good_mux.v
 $ iverilog good_mux.v tb_good_mux.v
@@ -107,7 +107,7 @@ $ gtkwave tb_good_mux.v
 
 ```
 ```
-'MUX design'
+*MUX design*
 
 ```
 module good_mux (input i0 , input i1 , input sel , output reg y);
@@ -121,7 +121,7 @@ end
 endmodule
 ```
 
-'MUX testbench'
+*MUX testbench*
 
 ```
 `timescale 1ns / 1ps
@@ -154,6 +154,6 @@ always #10 i0 = ~i0;
 always #55 i1 = ~i1;
 endmodule
 ```
-'gtkwave output'
+*gtkwave output*
 ![day1-1](https://user-images.githubusercontent.com/112769624/236661094-f39ac58d-214e-4938-9e4c-ff875f46e0d8.png)
 
