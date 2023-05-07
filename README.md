@@ -165,6 +165,7 @@ endmodule
 ![yosys_flow](https://user-images.githubusercontent.com/112769624/236665087-54638e48-cd2e-4f09-bc2e-1b81182186b0.png)
 
 *commands for synthesis *
+
 ```
 yosys> read_liberty -lib /home/knightmare/vlsi/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 yosys> read_verilog /home/knightmare/vlsi/sky130RTLDesignAndSynthesisWorkshop//verilog_files/good_mux.v
