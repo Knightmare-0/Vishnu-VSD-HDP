@@ -402,6 +402,28 @@ module dff_asyncres(input d,input clk,input syncres,input ayncres,output reg q)
     end
 endmodule
 ```
+*command for synthesis of 1 and 2 in yosys*
+```
+yosys> read_liberty -lib /home/knightmare/vlsi/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib 
+yosys> read_verilog /home/knightmare/vlsi/sky130RTLDesignAndSynthesisWorkshop/verilog_files/dff_asyncres.v
+yosys> synth -top dff_asyncres 
+yosys> dfflibmap -liberty /home/knightmare/vlsi/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib 
+yosys> abc -liberty /home/knightmare/vlsi/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib 
+yosys> show
+yosys> read_verilog /home/knightmare/vlsi/sky130RTLDesignAndSynthesisWorkshop/verilog_files/dff_syncres.v 
+yosys> synth -top dff_syncres 
+yosys> dfflibmap -liberty /home/knightmare/vlsi/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib 
+yosys> abc -liberty /home/knightmare/vlsi/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib 
+yosys> show
+```
+![asyncres_dff](https://user-images.githubusercontent.com/112769624/236834419-d00e964f-7ae3-45d8-9041-ca7cd9c54856.png)
+![dff_syncres](https://user-images.githubusercontent.com/112769624/236834488-db937766-d0e4-42b8-b04e-1910e0f1a14f.png)
+
+*Note : synchronous logic is realized using a nor logic*
+*	dfflibmap maps to all dff's*
+
+
+
 
 
 
