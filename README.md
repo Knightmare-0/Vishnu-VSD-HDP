@@ -356,6 +356,68 @@ module multiple_modules(a, b, c, y);
   assign net1 = \u1.y ;
 endmodule
 ```
+## Flops 
+*synchronous reset and asynchronous reset in flops*
+*1> asynchronous reset*
+```
+module dff_asyncres(input d,input clk,input asyncres,output reg q)
+  always @(posedge clk , posedge asyncres)
+    begin
+    if(asyncres)
+      q <= 1'b0;
+  	else
+      q <= d;
+    end
+endmodule
+```
+*2> synchronous reset*
+```
+module dff_asyncres(input d,input clk,input syncres,output reg q)
+  always @(posedge clk)
+    begin
+    if(syncres)
+      q <= 1'b0;
+  	else
+      q <= d;
+    end
+endmodule
+```
+*3> both synchronous and asynchronous reset*
+```
+module dff_asyncres(input d,input clk,input syncres,input ayncres,output reg q)
+  always @(posedge clk, posedge asyncres)
+    begin
+    if(asyncres)
+      q <= 1'b0;
+    else if(syncres)
+      q <= 1'b0;
+    else
+      q <= d;
+    end
+endmodule
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
