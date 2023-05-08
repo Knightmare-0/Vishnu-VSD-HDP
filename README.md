@@ -218,8 +218,9 @@ module good_mux(i0, i1, sel, y);
   assign y = _3_;
 endmodule
 ```
-##Day_2
-###Hirarchical synthesis and Flattened synthesis
+## Day_2
+### Hirarchical synthesis and Flattened synthesis
+
 *Commands for hirarchical synthesis*
 ```
 yosys> read_liberty -lib /home/knightmare/vlsi/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
@@ -231,6 +232,7 @@ yosys> write_verilog -noattr multiple_modules_hirar.v
 yosys> !gedit multiple_modules_hirar.v
 ```
 *Output netlist and module*
+
 ![hirar_syn](https://user-images.githubusercontent.com/112769624/236819016-d610881c-1166-4e52-863b-47217f667920.png)
 
 ```
@@ -300,6 +302,7 @@ endmodule
 
 ```
 *Commands for flattend synthesis*
+
 *insert following command after synthesis*
 ```
 yosys> flatten
@@ -307,6 +310,7 @@ yosys> write_verilog -noattr multiple_modules_flat.v
 yosys> !gedit multiple_modules_flat.v
 ```
 *Output netlist and module*
+
 ![flattened_synth](https://user-images.githubusercontent.com/112769624/236819091-f60ab187-0700-499b-ac07-ad9bb7060b06.png)
 
 ```
@@ -357,6 +361,7 @@ module multiple_modules(a, b, c, y);
 endmodule
 ```
 ## Flops 
+
 *synchronous reset and asynchronous reset in flops*
 
 *1> asynchronous reset*
