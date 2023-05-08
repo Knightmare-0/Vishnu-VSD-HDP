@@ -358,6 +358,7 @@ endmodule
 ```
 ## Flops 
 *synchronous reset and asynchronous reset in flops*
+
 *1> asynchronous reset*
 ```
 module dff_asyncres(input d,input clk,input asyncres,output reg q)
