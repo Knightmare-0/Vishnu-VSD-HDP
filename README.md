@@ -425,7 +425,7 @@ yosys> show
 *Note : synchronous logic is realized using a nor logic*
 	*dfflibmap maps to all dff's*
 ## interesting optimization 
-* 1> Code 1*
+* 1> Code 1 *
 ```
 module mul2 (input [2:0] a, output [3:0] y);
 	assign y = a * 2;
@@ -435,7 +435,7 @@ endmodule
 
 ![a*2](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/6cbcf6c6-472e-4d30-8edc-e4fecebc84fb)
 
-* 2> Code 2*
+* 2> Code 2 *
 ```
 module mult8 (input [2:0] a , output [5:0] y);
 	assign y = a * 9;
