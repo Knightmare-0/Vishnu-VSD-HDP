@@ -417,10 +417,13 @@ yosys> abc -liberty /home/knightmare/vlsi/sky130RTLDesignAndSynthesisWorkshop/li
 yosys> show
 ```
 ![asyncres_dff](https://user-images.githubusercontent.com/112769624/236834419-d00e964f-7ae3-45d8-9041-ca7cd9c54856.png)
+![asyncres_gtkwave](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/e1ccf3f2-169b-4263-bc44-58621c0fcdb7)
+
 ![dff_syncres](https://user-images.githubusercontent.com/112769624/236834488-db937766-d0e4-42b8-b04e-1910e0f1a14f.png)
+![syncress_dff_gtkwave](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/930e3537-ee69-4393-908d-c4ace1a704c1)
 
 *Note : synchronous logic is realized using a nor logic*
-*	dfflibmap maps to all dff's*
+	*dfflibmap maps to all dff's*
 
 
 
