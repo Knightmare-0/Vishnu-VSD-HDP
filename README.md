@@ -427,7 +427,7 @@ yosys> show
 ## interesting optimization 
 *Special cases where there is wired logic used instead of multipliers*
 
-*1> Code 1 *
+*1> Code 1*
 ```
 module mul2 (input [2:0] a, output [3:0] y);
 	assign y = a * 2;
@@ -436,7 +436,8 @@ endmodule
 *synthesis output*
 
 ![a*2](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/6cbcf6c6-472e-4d30-8edc-e4fecebc84fb)
-*2> Code 2 *
+
+*2> Code 2*
 ```
 module mult8 (input [2:0] a , output [5:0] y);
 	assign y = a * 9;
