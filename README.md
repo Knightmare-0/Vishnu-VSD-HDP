@@ -443,6 +443,9 @@ module mult8 (input [2:0] a , output [5:0] y);
 	assign y = a * 9;
 endmodule
 ```
+
+*synthesis output*
+
 ![a*9](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/9651e292-4801-4d09-84d0-8b8bc31e6d86)
 
 
