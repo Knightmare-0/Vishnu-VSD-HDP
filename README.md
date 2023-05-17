@@ -546,6 +546,81 @@ endmodule
 
 ![multiple_modules_opt2](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/59aeed7e-64c9-4672-93a2-6183a2dc6376)
 
+## Sequential Optimization
+*use command*
+```
+yosys> dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib 
+```
+*for sequential circuits*
+
+*dff_const1 code*
+```
+module dff_const1(input clk, input reset, output reg q);
+always @(posedge clk, posedge reset)
+begin
+	if(reset)
+		q <= 1'b0;
+	else
+		q <= 1'b1;
+end
+
+endmodule
+```
+
+*dff_const1 waveform analysis*
+![dff_const1_wave](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/733aaedc-cd84-4596-b604-3d09373a017a)
+
+*dff_const1 synthesis analysis*
+
+![dff_const1_synth](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/02cd3a26-fed4-4514-a559-34bfe65c66ac)
+
+*dff_const2 code*
+```
+module dff_const2(input clk, input reset, output reg q);
+always @(posedge clk, posedge reset)
+begin
+	if(reset)
+		q <= 1'b1;
+	else
+		q <= 1'b1;
+end
+
+endmodule
+```
+*dff_const2 waveform analysis*
+![dff_const2_wave](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/a81218ef-4443-4a27-80af-d31edf92f80d)
+
+*dff_const2 synthesis analysis*
+![dff_const2_synth](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/8746ef53-9fc9-4fa9-9c01-e36862ad9453)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
