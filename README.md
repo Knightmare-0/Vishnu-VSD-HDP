@@ -596,6 +596,148 @@ endmodule
 
 ![dff_const2_synth](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/8746ef53-9fc9-4fa9-9c01-e36862ad9453)
 
+*dff_const3 code*
+
+```
+module dff_const3(input clk, input reset, output reg q);
+reg q1;
+
+always @(posedge clk, posedge reset)
+begin
+	if(reset)
+	begin
+		q <= 1'b1;
+		q1 <= 1'b0;
+	end
+	else
+	begin
+		q1 <= 1'b1;
+		q <= q1;
+	end
+end
+
+endmodule
+```
+![dff_const3](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/89d5efc2-d300-472c-be8b-ce9532216930)
+
+*dff_const2 waveform analysis*
+
+![dff_const3_wave](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/bcd2760b-e44d-4e52-93d9-49036ffdda9e)
+
+*Note : dff2 samples 0 at posedge as a result of clock to q delay of dff1 * 
+
+*dff_const2 synthesis analysis*
+
+![dff_const3_synth](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/eefe5375-fb03-42e9-b6a2-b31675bccd77)
+
+*dff_const4 code*
+```
+module dff_const4(input clk, input reset, output reg q);
+reg q1;
+
+always @(posedge clk, posedge reset)
+begin
+	if(reset)
+	begin
+		q <= 1'b1;
+		q1 <= 1'b1;
+	end
+	else
+	begin
+		q1 <= 1'b1;
+		q <= q1;
+	end
+end
+
+endmodule
+```
+
+*dff_const4 waveform analysis*
+
+![dff_const4_wave](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/26f8a75b-0216-4d4e-a65d-8b06bff996fa)
+
+*dff_const4 synthesis analysis*
+
+![dff_const4_synth](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/1d18cd05-d8c2-4873-b179-89bf63add021)
+
+*dff_const5 code*
+```
+module dff_const5(input clk, input reset, output reg q);
+reg q1;
+
+always @(posedge clk, posedge reset)
+begin
+	if(reset)
+	begin
+		q <= 1'b0;
+		q1 <= 1'b0;
+	end
+	else
+	begin
+		q1 <= 1'b1;
+		q <= q1;
+	end
+end
+
+endmodule
+```
+
+*dff_const5 waveform analysis*
+
+![dff_const5_wave](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/c113225e-7e17-4ba9-a918-98bb0d118b1a)
+
+*Note : dff2 samples 0 at posedge as a result of clock to q delay of dff1 * 
+
+*dff_const4 synthesis analysis*
+
+![dff_const5_synth](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/6c5816b1-d3b8-4e1a-97db-6833ba14986e)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
