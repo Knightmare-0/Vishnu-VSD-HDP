@@ -448,6 +448,118 @@ endmodule
 
 ![a*9](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/9651e292-4801-4d09-84d0-8b8bc31e6d86)
 
+### DAY 3
+## combinational logic optimization
+*following commands are used for optimization after synthesis*
+```
+yosys> opt_clean -purge
+```
+*NOTE : use flatten for multiple modules*
+
+
+*code opt_check*
+```
+module opt_check (input a , input b , output y);
+	assign y = a?b:0;
+endmodule
+```
+*synthesis reduced to AND gate*
+
+![opt_check](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/861099b2-5e07-49e8-9672-18b8d78d2a66)
+
+*code opt_check2*
+```
+module opt_check2 (input a , input b , output y);
+	assign y = a?1:b;
+endmodule
+```
+*synthesis reduced to OR gate*
+![opt_check2](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/05ef6e22-77b0-425a-970e-8dadd0c5f7da)
+
+*code opt_check3*
+```
+module opt_check3 (input a , input b, input c , output y);
+	assign y = a?(c?b:0):0;
+endmodule
+```
+*synthesis reduced to 3 input AND gate*
+![opt_check3](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/a72ba48a-95e1-4828-92d5-86582c876583)
+
+*code opt_check4*
+```
+module opt_check4 (input a , input b , input c , output y);
+assign y = a?(b?(a & c ):c):(!c);
+endmodule
+```
+*synthesis reduced to XOR gate*
+
+![opt_check4](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/c53d9d91-f9d9-4220-9b6b-c0a8d442315a)
+
+*code multiple_module_opt*
+```
+module sub_module1(input a , input b , output y);
+ assign y = a & b;
+endmodule
+
+
+module sub_module2(input a , input b , output y);
+ assign y = a^b;
+endmodule
+
+
+module multiple_module_opt(input a , input b , input c , input d , output y);
+wire n1,n2,n3;
+
+sub_module1 U1 (.a(a) , .b(1'b1) , .y(n1));
+sub_module2 U2 (.a(n1), .b(1'b0) , .y(n2));
+sub_module2 U3 (.a(b), .b(d) , .y(n3));
+
+assign y = c | (b & n1); 
+
+
+endmodule
+```
+*synthesis optimized using distributive boolean law*
+![multiple_module_opt](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/7caa938d-616e-4514-a294-f40765f5b8ac)
+
+*code multiple_module_opt2*
+```
+
+module sub_module(input a , input b , output y);
+ assign y = a & b;
+endmodule
+
+
+
+module multiple_module_opt2(input a , input b , input c , input d , output y);
+wire n1,n2,n3;
+
+sub_module U1 (.a(a) , .b(1'b0) , .y(n1));
+sub_module U2 (.a(b), .b(c) , .y(n2));
+sub_module U3 (.a(n2), .b(d) , .y(n3));
+sub_module U4 (.a(n3), .b(n1) , .y(y));
+
+
+endmodule
+```
+*synthesis optimized for output 0*
+
+![multiple_modules_opt2](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/59aeed7e-64c9-4672-93a2-6183a2dc6376)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
