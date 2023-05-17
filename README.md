@@ -692,7 +692,51 @@ endmodule
 
 ![dff_const5_synth](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/6c5816b1-d3b8-4e1a-97db-6833ba14986e)
 
+## unused output optimization
 
+*counter_opt code*
+```
+module counter_opt (input clk , input reset , output q);
+reg [2:0] count;
+assign q = count[0];
+
+always @(posedge clk ,posedge reset)
+begin
+	if(reset)
+		count <= 3'b000;
+	else
+		count <= count + 1;
+end
+
+endmodule
+```
+*optimized synthesis*
+
+![counter_opt_synth](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/9e84e284-fd8e-424f-a209-ce6e64bef050)
+
+*counter_opt2 code*
+```
+module counter_opt (input clk , input reset , output q);
+reg [2:0] count;
+assign q = (count[2:0] == 3'b100);
+
+always @(posedge clk ,posedge reset)
+begin
+	if(reset)
+		count <= 3'b000;
+	else
+		count <= count + 1;
+end
+
+endmodule
+```
+*synthesised map*
+
+![counter_opt2_synth](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/41558fbd-3ad9-4108-b6a7-1f05b7d97566)
+
+*synthesis deduction*
+
+![count_opt_with_3ip](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/44db6860-6ecf-4b9c-91ab-6d96a2c82e01)
 
 
 
