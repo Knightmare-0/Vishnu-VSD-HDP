@@ -568,6 +568,7 @@ endmodule
 ```
 
 *dff_const1 waveform analysis*
+
 ![dff_const1_wave](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/733aaedc-cd84-4596-b604-3d09373a017a)
 
 *dff_const1 synthesis analysis*
@@ -588,9 +589,11 @@ end
 endmodule
 ```
 *dff_const2 waveform analysis*
+
 ![dff_const2_wave](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/a81218ef-4443-4a27-80af-d31edf92f80d)
 
 *dff_const2 synthesis analysis*
+
 ![dff_const2_synth](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/8746ef53-9fc9-4fa9-9c01-e36862ad9453)
 
 
