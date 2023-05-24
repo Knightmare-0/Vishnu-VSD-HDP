@@ -734,9 +734,6 @@ endmodule
 
 ![counter_opt2_synth](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/41558fbd-3ad9-4108-b6a7-1f05b7d97566)
 
-*synthesis deduction*
-
-![count_opt_with_3ip](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/44db6860-6ecf-4b9c-91ab-6d96a2c82e01)
 
 
 
