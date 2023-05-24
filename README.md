@@ -734,6 +734,92 @@ endmodule
 
 ![counter_opt2_synth](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/41558fbd-3ad9-4108-b6a7-1f05b7d97566)
 
+### Day 4
+## Gate Level Simulation
+*commands for Gate Level Simulation Using i verilog*
+```
+knightmare@Wizz-Corp:~/vlsi/sky130RTLDesignAndSynthesisWorkshop/verilog_files$ iverilog ../my_lib/verilog_model/primitives.v ../my_lib/verilog_model/sky130_fd_sc_hd.v ternary_operator_mux_net.v tb_ternary_operator_mux.v
+knightmare@Wizz-Corp:~/vlsi/sky130RTLDesignAndSynthesisWorkshop/verilog_files$ ./a.out
+VCD info: dumpfile tb_bad_mux.vcd opened for output.
+knightmare@Wizz-Corp:~/vlsi/sky130RTLDesignAndSynthesisWorkshop/verilog_files$ gtkwave tb_ternary_operator_mux.vcd 
+```
+*1>RTL Simulation and Netlist Simulation of a MUX using a ternary operator*
+
+*Code for MUX using a ternary operator*
+
+```
+module ternary_operator_mux (input i0 , input i1 , input sel , output y);
+	assign y = sel?i1:i0;
+	endmodule
+```
+
+*RTL Simulation*
+
+![ter_opt_mux_rtlsim](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/f467a028-31ef-4751-8e41-7b79da11fa39)
+
+*Netlist Simulation*
+
+![ter_opt_mux_gls](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/e4223ec8-a360-4f91-b091-7dd6fd69fd7c)
+
+![ter_mux_synth](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/ddaa260a-53d5-426d-9b3d-afed423b8d04)
+
+*2>Bad MUX*
+
+*Note : Output changes only when select changes in RTL Simulation*
+
+*Bad MUX Code*
+```
+module bad_mux (input i0 , input i1 , input sel , output reg y);
+always @ (sel)
+begin
+	if(sel)
+		y <= i1;
+	else 
+		y <= i0;
+end
+endmodule
+```
+*RTL Simulation*
+
+![bad_mux_rtlsim](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/476703f8-20a7-46ea-9cc8-ce569558a612)
+
+*Netlist Simulation*
+
+![bad_mux_netsim](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/cc5f1b24-936a-4d32-b1f0-f59789cd22d5)
+
+*3>blocking_caveat Simulation Missmatch*
+
+*blocking_caveat code*
+
+```
+module blocking_caveat (input a , input b , input  c, output reg d); 
+reg x;
+always @ (*)
+begin
+	d = x & c;
+	x = a | b;
+end
+endmodule
+```
+
+*RTL Simulation*
+
+![blocking_caveate_rtlsim](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/6f2288ea-b8f4-4049-a3ca-3b1fd191a900)
+
+*Netlist Simulation*
+
+![blocking_caveat_netsim](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/5ff26c23-4a1c-40e6-ba62-35a46e936a30)
+
+*Netlist Synthesis*
+
+![blocking_caveat_synth](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/7a5ec256-ec1b-479d-b8a9-624429040ed8)
+
+
+
+
+
+
+
 
 
 
