@@ -814,6 +814,103 @@ endmodule
 
 ![blocking_caveat_synth](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/7a5ec256-ec1b-479d-b8a9-624429040ed8)
 
+### Day 5
+
+## Incomplete if case constructs
+
+*code for incomplete if*
+
+```
+module incomp_if (input i0 , input i1 , input i2 , output reg y);
+always @ (*)
+begin
+	if(i0)
+		y <= i1;
+end
+endmodule
+```
+
+*RTL Simulation*
+
+![incompif_rtlsim](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/9cc7af74-bfa7-45a4-8549-5859e219f717)
+
+*Note : the output y is given as input to 0th input of the mux (this implies a D-Latch)* 
+
+*Synthesis output*
+
+![incompif_synth](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/298c0f09-4329-491f-8d3f-46661ae40840)
+
+*code for incomplete if 2*
+
+```
+module incomp_if2 (input i0 , input i1 , input i2 , input i3, output reg y);
+always @ (*)
+begin
+	if(i0)
+		y <= i1;
+	else if (i2)
+		y <= i3;
+
+end
+endmodule
+```
+*RTL Simulation*
+
+![incompif2_rtlsim](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/f8b684ce-6273-455f-b043-e5b62816ee5b)
+
+*Note : The output y is given as input to 0th input of the select i2 mux (this implies a combinational logic is connected to D-Latch enable XOR i1 and i2 as enable)* 
+
+*Synthesis output*
+
+![incomp_if2_synth](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/871a6515-5580-433e-9701-7fec9ccca49f)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
