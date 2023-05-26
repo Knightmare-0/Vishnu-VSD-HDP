@@ -864,6 +864,297 @@ endmodule
 
 ![incomp_if2_synth](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/871a6515-5580-433e-9701-7fec9ccca49f)
 
+*Bad Case Code*
+```
+module bad_case (input i0 , input i1, input i2, input i3 , input [1:0] sel, output reg y);
+always @(*)
+begin
+	case(sel)
+		2'b00: y = i0;
+		2'b01: y = i1;
+		2'b10: y = i2;
+		2'b1?: y = i3;
+		//2'b11: y = i3;
+	endcase
+end
+
+endmodule
+```
+
+*RTL Simulation* 
+
+![bad_case_rtlsim](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/d2fce97b-ce31-45e1-aba4-7e850849e3f5)
+
+*Gate Level Simulation*
+
+![bad_case_gls](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/8098fff8-f070-48cf-ace6-4f1d76ab3a80)
+
+*Bad Case Synthesis*
+
+![bad_case_synth](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/4fa3f1a0-571e-4a44-bf5a-ba9cacee06d0)
+
+*Complete Case Code*
+
+```
+module comp_case (input i0 , input i1 , input i2 , input [1:0] sel, output reg y);
+always @ (*)
+begin
+	case(sel)
+		2'b00 : y = i0;
+		2'b01 : y = i1;
+		default : y = i2;
+	endcase
+end
+endmodule
+```
+
+*RTL Simulation*
+
+![compcase_rtlsim](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/36e3b464-33df-4042-b157-de2df62129c5)
+
+*Synthesis Output*
+
+![compcase_synth](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/807c2749-fac3-40b5-bb35-70e8dda02f69)
+
+*Incomplete Case Code*
+
+```
+module incomp_case (input i0 , input i1 , input i2 , input [1:0] sel, output reg y);
+always @ (*)
+begin
+	case(sel)
+		2'b00 : y = i0;
+		2'b01 : y = i1;
+	endcase
+end
+endmodule
+```
+
+*RTL Simulation*
+
+![incomplete_case_rtlsim](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/b2e7aff9-36f0-4716-83d6-8b56951331b0)
+
+*Synthesis Output*
+
+![incomplete_case_synth](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/78263597-77e8-48a1-bdd8-b76c31d58176)
+
+*Code for Partial Case Assign*
+```
+module partial_case_assign (input i0 , input i1 , input i2 , input [1:0] sel, output reg y , output reg x);
+always @ (*)
+begin
+	case(sel)
+		2'b00 : begin
+			y = i0;
+			x = i2;
+			end
+		2'b01 : y = i1;
+		default : begin
+		           x = i1;
+			   y = i2;
+			  end
+	endcase
+end
+endmodule
+```
+*Synthesis Output*
+
+![partial_compcase_synth](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/5674af44-5785-423b-b122-a1c7cd1f48f2)
+
+
+
+
+
+## Loop Constructs
+
+*Mux Generate Code*
+```
+module mux_generate (input i0 , input i1, input i2 , input i3 , input [1:0] sel  , output reg y);
+wire [3:0] i_int;
+assign i_int = {i3,i2,i1,i0};
+integer k;
+always @ (*)
+begin
+for(k = 0; k < 4; k=k+1) begin
+	if(k == sel)
+		y = i_int[k];
+end
+end
+endmodule
+```
+
+*RTL Simulation*
+
+![mux_generate_rtlsim](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/be2ab5fc-7006-4c6f-8ff7-b87005d648d5)
+
+*Synthesis Output*
+
+![mux_generate_synth](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/0508913b-cbb4-482e-9783-219d436f795a)
+
+*Demux Codes using case and for generate*
+
+```
+module demux_case (output o0 , output o1, output o2 , output o3, output o4, output o5, output o6 , output o7 , input [2:0] sel  , input i);
+reg [7:0]y_int;
+assign {o7,o6,o5,o4,o3,o2,o1,o0} = y_int;
+integer k;
+always @ (*)
+begin
+y_int = 8'b0;
+	case(sel)
+		3'b000 : y_int[0] = i;
+		3'b001 : y_int[1] = i;
+		3'b010 : y_int[2] = i;
+		3'b011 : y_int[3] = i;
+		3'b100 : y_int[4] = i;
+		3'b101 : y_int[5] = i;
+		3'b110 : y_int[6] = i;
+		3'b111 : y_int[7] = i;
+	endcase
+
+end
+endmodule
+
+module demux_generate (output o0 , output o1, output o2 , output o3, output o4, output o5, output o6 , output o7 , input [2:0] sel  , input i);
+reg [7:0]y_int;
+assign {o7,o6,o5,o4,o3,o2,o1,o0} = y_int;
+integer k;
+always @ (*)
+begin
+y_int = 8'b0;
+for(k = 0; k < 8; k++) begin
+	if(k == sel)
+		y_int[k] = i;
+end
+end
+endmodule
+```
+*demux case simulation*
+
+![demux_case_rtlsim](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/2318020a-bbc2-48c1-aae3-02ba9045da4d)
+
+*demux for loop simulation*
+
+![demux_generate_rtlsim](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/2044f711-006c-4316-b44a-158267c4b252)
+
+*demux case synthesis*
+
+![demux_case_synth](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/855d194f-10da-4c7d-8b98-8fc666f7d4d5)
+
+*demux for loop synthesis*
+
+![demux_generate_synth](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/4f4c8011-0866-4d24-b109-e58cfd65e2ed)
+
+*Ripple Carry Adder (rca) Code using for generate*
+
+```
+module rca (input [7:0] num1 , input [7:0] num2 , output [8:0] sum);
+wire [7:0] int_sum;
+wire [7:0]int_co;
+
+genvar i;
+generate
+	for (i = 1 ; i < 8; i=i+1) begin
+		fa u_fa_1 (.a(num1[i]),.b(num2[i]),.c(int_co[i-1]),.co(int_co[i]),.sum(int_sum[i]));
+	end
+
+endgenerate
+fa u_fa_0 (.a(num1[0]),.b(num2[0]),.c(1'b0),.co(int_co[0]),.sum(int_sum[0]));
+
+
+assign sum[7:0] = int_sum;
+assign sum[8] = int_co[7];
+endmodule
+```
+*full adder instansiation code*
+```
+module fa (input a , input b , input c, output co , output sum);
+	assign {co,sum}  = a + b + c ;
+endmodule
+```
+*RTL Simulation*
+
+![rca_rtlsim](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/51a88dea-6f3b-43f7-a3d8-5efaa2cecd9b)
+
+*rca synthesis*
+
+![rca_synth](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/fa133300-108f-46fe-b73d-70ee9e266b04)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
