@@ -31,5 +31,5 @@ endmodule
 
 ![bidcounter_GLS](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/c0c9f60e-8df7-4886-87e1-272ac8eba580)
 
-**NOTE :** **RTL Simulation is the same as Netlist Simulation
+**NOTE :** **RTL Simulation is the same as Netlist Simulation**
 
