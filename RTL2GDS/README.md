@@ -1,4 +1,4 @@
-### RTL to GDS For A Bidirectional Counter
+# RTL to GDS For A Bidirectional Counter
 
 ## Code
 
