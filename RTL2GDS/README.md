@@ -24,6 +24,14 @@ endmodule
 
 ![bidsynth](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/02343500-e74d-4b76-ad2d-8acf5516a8b4)
 
+## DFFLIBMAP Results
+
+![DFF_LIB_MAP_Result](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/296061ca-de93-4826-928f-904b2553afa5)
+
+## ABC Results
+
+![ABC_results](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/6c38ce7f-0338-4730-a2fb-dc9a7009b130)
+
 ## Netlist 
 
 ![bidcounter_synth](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/0079969b-3bbd-4d6c-a1be-025895f2ab48)
