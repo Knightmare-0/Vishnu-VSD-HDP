@@ -57976,6 +57976,8 @@ module sky130_fd_sc_hd__dfxtp (
     sky130_fd_sc_hd__udp_dff$P_pp$PG$N dff0 (buf_Q , D_delayed, CLK_delayed, notifier, VPWR, VGND);
     assign awake = ( VPWR === 1'b1 );
     buf                                buf0 (Q     , buf_Q                                       );
+    buf buf1(D_delayed,D);
+    buf buf2(CLK_delayed,CLK);
 
 endmodule
 `endcelldefine
@@ -58107,6 +58109,8 @@ module sky130_fd_sc_hd__dfxtp (
     sky130_fd_sc_hd__udp_dff$P_pp$PG$N dff0 (buf_Q , D_delayed, CLK_delayed, notifier, VPWR, VGND);
     assign awake = ( VPWR === 1'b1 );
     buf                                buf0 (Q     , buf_Q                                       );
+    buf buf1(D_delayed,D);
+    buf buf2(CLK_delayed,CLK);
 
 endmodule
 `endcelldefine
@@ -96268,7 +96272,8 @@ module sky130_fd_sc_hd__edfxtp (
     assign awake = ( VPWR === 1'b1 );
     assign cond0 = ( awake && ( DE_delayed === 1'b1 ) );
     buf                                buf0      (Q      , buf_Q                                     );
-
+    buf buf1(D_delayed,D);
+    buf buf2(CLK_delayed,CLK);
 endmodule
 `endcelldefine
 
