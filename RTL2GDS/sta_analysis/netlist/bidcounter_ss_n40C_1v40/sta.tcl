@@ -1,5 +1,5 @@
-read_liberty ../../lib/sky130_fd_sc_hd__ff_100C_1v65.lib
-read_verilog bidcounter_ff_1v65.v
+read_liberty ../../lib/sky130_fd_sc_hd__ss_n40C_1v40.lib
+read_verilog bidcounter_ss_n40C_1v40.v
 link_design bidcounter
 read_sdc ../../contraint.tcl
 report_checks -verbose -path_delay min_max -fields {nets cap slew input_pins} -digits 4 > sta_report/bidcounter_gen_rep.rpt

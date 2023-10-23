@@ -4,7 +4,7 @@
 mkdir -p "sta_report"
 mkdir -p "gls_report"
 
-iverilog bidcounter_ff_1v65.v ../../bidcounter_tb.v ../../verilog_model/primitives.v ../../verilog_model/sky130_fd_sc_hd.v
+iverilog bidcounter_ss_n40C_1v76.v ../../bidcounter_tb.v ../../verilog_model/primitives.v ../../verilog_model/sky130_fd_sc_hd.v
 ./a.out
 mv a.out gls_report
 mv wave.vcd gls_report

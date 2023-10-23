@@ -1,0 +1,74 @@
+Warning: sta.tcl, 5 report_checks -verbose is not a known keyword or flag.
+Startpoint: ctrl (input port clocked by MYCLK)
+Endpoint: _50_ (rising edge-triggered flip-flop clocked by MYCLK)
+Path Group: MYCLK
+Path Type: min
+
+Fanout       Cap      Slew     Delay      Time   Description
+------------------------------------------------------------------------------------
+                   0.0000    0.0000    0.0000   clock MYCLK (rise edge)
+                             2.0000    2.0000   clock network delay (ideal)
+                             1.0000    3.0000 ^ input external delay
+                   0.1000    0.0000    3.0000 ^ ctrl (in)
+    5    0.0148                                 ctrl (net)
+                   0.1000    0.0000    3.0000 ^ _37_/B (sky130_fd_sc_hd__xnor2_1)
+                   0.0958    0.1534    3.1534 v _37_/Y (sky130_fd_sc_hd__xnor2_1)
+    2    0.0040                                 _19_ (net)
+                   0.0958    0.0000    3.1534 v _39_/A2 (sky130_fd_sc_hd__a21oi_1)
+                   0.2251    0.3706    3.5239 ^ _39_/Y (sky130_fd_sc_hd__a21oi_1)
+    1    0.0014                                 _10_ (net)
+                   0.2251    0.0000    3.5239 ^ _50_/D (sky130_fd_sc_hd__dfxtp_1)
+                                       3.5239   data arrival time
+
+                   0.0000    0.0000    0.0000   clock MYCLK (rise edge)
+                             2.0000    2.0000   clock network delay (ideal)
+                             0.1000    2.1000   clock uncertainty
+                             0.0000    2.1000   clock reconvergence pessimism
+                                       2.1000 ^ _50_/CLK (sky130_fd_sc_hd__dfxtp_1)
+                            -0.1592    1.9408   library hold time
+                                       1.9408   data required time
+------------------------------------------------------------------------------------
+                                       1.9408   data required time
+                                      -3.5239   data arrival time
+------------------------------------------------------------------------------------
+                                       1.5832   slack (MET)
+
+
+Startpoint: _50_ (rising edge-triggered flip-flop clocked by MYCLK)
+Endpoint: _50_ (rising edge-triggered flip-flop clocked by MYCLK)
+Path Group: MYCLK
+Path Type: max
+
+Fanout       Cap      Slew     Delay      Time   Description
+------------------------------------------------------------------------------------
+                   0.0000    0.0000    0.0000   clock MYCLK (rise edge)
+                             2.0000    2.0000   clock network delay (ideal)
+                   0.0000    0.0000    2.0000 ^ _50_/CLK (sky130_fd_sc_hd__dfxtp_1)
+                  11.4288    9.4723   11.4723 ^ _50_/Q (sky130_fd_sc_hd__dfxtp_1)
+    5    0.4102                                 count[1] (net)
+                  11.4288    0.0000   11.4723 ^ _37_/A (sky130_fd_sc_hd__xnor2_1)
+                   0.9099    3.8439   15.3163 v _37_/Y (sky130_fd_sc_hd__xnor2_1)
+    2    0.0040                                 _19_ (net)
+                   0.9099    0.0000   15.3163 v _38_/A2 (sky130_fd_sc_hd__o21bai_1)
+                   0.4769    0.8781   16.1944 ^ _38_/Y (sky130_fd_sc_hd__o21bai_1)
+    1    0.0022                                 _20_ (net)
+                   0.4769    0.0000   16.1944 ^ _39_/B1 (sky130_fd_sc_hd__a21oi_1)
+                   1.0053    0.2328   16.4272 v _39_/Y (sky130_fd_sc_hd__a21oi_1)
+    1    0.0014                                 _10_ (net)
+                   1.0053    0.0000   16.4272 v _50_/D (sky130_fd_sc_hd__dfxtp_1)
+                                      16.4272   data arrival time
+
+                   0.0000   10.0000   10.0000   clock MYCLK (rise edge)
+                             2.0000   12.0000   clock network delay (ideal)
+                            -0.5000   11.5000   clock uncertainty
+                             0.0000   11.5000   clock reconvergence pessimism
+                                      11.5000 ^ _50_/CLK (sky130_fd_sc_hd__dfxtp_1)
+                            -1.2677   10.2323   library setup time
+                                      10.2323   data required time
+------------------------------------------------------------------------------------
+                                      10.2323   data required time
+                                     -16.4272   data arrival time
+------------------------------------------------------------------------------------
+                                      -6.1949   slack (VIOLATED)
+
+

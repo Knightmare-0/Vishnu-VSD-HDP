@@ -1,0 +1,71 @@
+Warning: sta.tcl, 5 report_checks -verbose is not a known keyword or flag.
+Startpoint: _49_ (rising edge-triggered flip-flop clocked by MYCLK)
+Endpoint: _49_ (rising edge-triggered flip-flop clocked by MYCLK)
+Path Group: MYCLK
+Path Type: min
+
+Fanout       Cap      Slew     Delay      Time   Description
+------------------------------------------------------------------------------------
+                   0.0000    0.0000    0.0000   clock MYCLK (rise edge)
+                             2.0000    2.0000   clock network delay (ideal)
+                   0.0000    0.0000    2.0000 ^ _49_/CLK (sky130_fd_sc_hd__dfxtp_1)
+                   0.6073    0.8657    2.8657 v _49_/Q (sky130_fd_sc_hd__dfxtp_1)
+    7    0.1124                                 count[0] (net)
+                   0.6073    0.0000    2.8657 v _36_/A (sky130_fd_sc_hd__nor2_1)
+                   0.0909    0.3690    3.2347 ^ _36_/Y (sky130_fd_sc_hd__nor2_1)
+    1    0.0016                                 _09_ (net)
+                   0.0909    0.0000    3.2347 ^ _49_/D (sky130_fd_sc_hd__dfxtp_1)
+                                       3.2347   data arrival time
+
+                   0.0000    0.0000    0.0000   clock MYCLK (rise edge)
+                             2.0000    2.0000   clock network delay (ideal)
+                             0.1000    2.1000   clock uncertainty
+                             0.0000    2.1000   clock reconvergence pessimism
+                                       2.1000 ^ _49_/CLK (sky130_fd_sc_hd__dfxtp_1)
+                            -0.0759    2.0241   library hold time
+                                       2.0241   data required time
+------------------------------------------------------------------------------------
+                                       2.0241   data required time
+                                      -3.2347   data arrival time
+------------------------------------------------------------------------------------
+                                       1.2106   slack (MET)
+
+
+Startpoint: _50_ (rising edge-triggered flip-flop clocked by MYCLK)
+Endpoint: _50_ (rising edge-triggered flip-flop clocked by MYCLK)
+Path Group: MYCLK
+Path Type: max
+
+Fanout       Cap      Slew     Delay      Time   Description
+------------------------------------------------------------------------------------
+                   0.0000    0.0000    0.0000   clock MYCLK (rise edge)
+                             2.0000    2.0000   clock network delay (ideal)
+                   0.0000    0.0000    2.0000 ^ _50_/CLK (sky130_fd_sc_hd__dfxtp_1)
+                   5.9852    4.6821    6.6821 ^ _50_/Q (sky130_fd_sc_hd__dfxtp_1)
+    5    0.4109                                 count[1] (net)
+                   5.9852    0.0000    6.6821 ^ _37_/A (sky130_fd_sc_hd__xnor2_1)
+                   0.5936    1.3430    8.0251 v _37_/Y (sky130_fd_sc_hd__xnor2_1)
+    2    0.0042                                 _19_ (net)
+                   0.5936    0.0000    8.0251 v _38_/A2 (sky130_fd_sc_hd__o21bai_1)
+                   0.3221    0.4580    8.4831 ^ _38_/Y (sky130_fd_sc_hd__o21bai_1)
+    1    0.0024                                 _20_ (net)
+                   0.3221    0.0000    8.4831 ^ _39_/B1 (sky130_fd_sc_hd__a21oi_1)
+                   0.6101    0.1117    8.5948 v _39_/Y (sky130_fd_sc_hd__a21oi_1)
+    1    0.0015                                 _10_ (net)
+                   0.6101    0.0000    8.5948 v _50_/D (sky130_fd_sc_hd__dfxtp_1)
+                                       8.5948   data arrival time
+
+                   0.0000   10.0000   10.0000   clock MYCLK (rise edge)
+                             2.0000   12.0000   clock network delay (ideal)
+                            -0.5000   11.5000   clock uncertainty
+                             0.0000   11.5000   clock reconvergence pessimism
+                                      11.5000 ^ _50_/CLK (sky130_fd_sc_hd__dfxtp_1)
+                            -0.5467   10.9533   library setup time
+                                      10.9533   data required time
+------------------------------------------------------------------------------------
+                                      10.9533   data required time
+                                      -8.5948   data arrival time
+------------------------------------------------------------------------------------
+                                       2.3586   slack (MET)
+
+

@@ -7,26 +7,26 @@ Path Type: min
 Fanout       Cap      Slew     Delay      Time   Description
 ------------------------------------------------------------------------------------
                    0.0000    0.0000    0.0000   clock MYCLK (rise edge)
-                             3.0000    3.0000   clock network delay (ideal)
-                   0.0000    0.0000    3.0000 ^ _49_/CLK (sky130_fd_sc_hd__dfxtp_1)
-                   0.4110    0.5343    3.5343 v _49_/Q (sky130_fd_sc_hd__dfxtp_1)
+                             2.0000    2.0000   clock network delay (ideal)
+                   0.0000    0.0000    2.0000 ^ _49_/CLK (sky130_fd_sc_hd__dfxtp_1)
+                   0.4110    0.5343    2.5343 v _49_/Q (sky130_fd_sc_hd__dfxtp_1)
     7    0.1126                                 count[0] (net)
-                   0.4110    0.0000    3.5343 v _36_/A (sky130_fd_sc_hd__nor2_1)
-                   0.0567    0.2082    3.7426 ^ _36_/Y (sky130_fd_sc_hd__nor2_1)
+                   0.4110    0.0000    2.5343 v _36_/A (sky130_fd_sc_hd__nor2_1)
+                   0.0567    0.2082    2.7426 ^ _36_/Y (sky130_fd_sc_hd__nor2_1)
     1    0.0017                                 _09_ (net)
-                   0.0567    0.0000    3.7426 ^ _49_/D (sky130_fd_sc_hd__dfxtp_1)
-                                       3.7426   data arrival time
+                   0.0567    0.0000    2.7426 ^ _49_/D (sky130_fd_sc_hd__dfxtp_1)
+                                       2.7426   data arrival time
 
                    0.0000    0.0000    0.0000   clock MYCLK (rise edge)
-                             3.0000    3.0000   clock network delay (ideal)
-                             0.1000    3.1000   clock uncertainty
-                             0.0000    3.1000   clock reconvergence pessimism
-                                       3.1000 ^ _49_/CLK (sky130_fd_sc_hd__dfxtp_1)
-                            -0.0295    3.0705   library hold time
-                                       3.0705   data required time
+                             2.0000    2.0000   clock network delay (ideal)
+                             0.1000    2.1000   clock uncertainty
+                             0.0000    2.1000   clock reconvergence pessimism
+                                       2.1000 ^ _49_/CLK (sky130_fd_sc_hd__dfxtp_1)
+                            -0.0295    2.0705   library hold time
+                                       2.0705   data required time
 ------------------------------------------------------------------------------------
-                                       3.0705   data required time
-                                      -3.7426   data arrival time
+                                       2.0705   data required time
+                                      -2.7426   data arrival time
 ------------------------------------------------------------------------------------
                                        0.6721   slack (MET)
 
@@ -39,36 +39,36 @@ Path Type: max
 Fanout       Cap      Slew     Delay      Time   Description
 ------------------------------------------------------------------------------------
                    0.0000    0.0000    0.0000   clock MYCLK (rise edge)
-                             3.0000    3.0000   clock network delay (ideal)
-                             5.0000    8.0000 v input external delay
-                   0.4000    0.0000    8.0000 v ctrl (in)
+                             2.0000    2.0000   clock network delay (ideal)
+                             3.0000    5.0000 v input external delay
+                   0.4000    0.0000    5.0000 v ctrl (in)
     5    0.0147                                 ctrl (net)
-                   0.4000    0.0000    8.0000 v _44_/C (sky130_fd_sc_hd__or4_1)
-                   0.0895    0.5208    8.5208 v _44_/X (sky130_fd_sc_hd__or4_1)
+                   0.4000    0.0000    5.0000 v _44_/C (sky130_fd_sc_hd__or4_1)
+                   0.0895    0.5208    5.5208 v _44_/X (sky130_fd_sc_hd__or4_1)
     1    0.0021                                 _24_ (net)
-                   0.0895    0.0000    8.5208 v _46_/A (sky130_fd_sc_hd__nand2_1)
-                   0.1261    0.0855    8.6063 ^ _46_/Y (sky130_fd_sc_hd__nand2_1)
+                   0.0895    0.0000    5.5208 v _46_/A (sky130_fd_sc_hd__nand2_1)
+                   0.1261    0.0855    5.6063 ^ _46_/Y (sky130_fd_sc_hd__nand2_1)
     1    0.0045                                 _26_ (net)
-                   0.1261    0.0000    8.6063 ^ _47_/B (sky130_fd_sc_hd__xnor2_1)
-                   0.3428    0.0580    8.6643 v _47_/Y (sky130_fd_sc_hd__xnor2_1)
+                   0.1261    0.0000    5.6063 ^ _47_/B (sky130_fd_sc_hd__xnor2_1)
+                   0.3428    0.0580    5.6643 v _47_/Y (sky130_fd_sc_hd__xnor2_1)
     1    0.0021                                 _27_ (net)
-                   0.3428    0.0000    8.6643 v _48_/B (sky130_fd_sc_hd__nor2_1)
-                   0.1040    0.1713    8.8356 ^ _48_/Y (sky130_fd_sc_hd__nor2_1)
+                   0.3428    0.0000    5.6643 v _48_/B (sky130_fd_sc_hd__nor2_1)
+                   0.1040    0.1713    5.8356 ^ _48_/Y (sky130_fd_sc_hd__nor2_1)
     1    0.0017                                 _12_ (net)
-                   0.1040    0.0000    8.8356 ^ _52_/D (sky130_fd_sc_hd__dfxtp_1)
-                                       8.8356   data arrival time
+                   0.1040    0.0000    5.8356 ^ _52_/D (sky130_fd_sc_hd__dfxtp_1)
+                                       5.8356   data arrival time
 
                    0.0000   10.0000   10.0000   clock MYCLK (rise edge)
-                             3.0000   13.0000   clock network delay (ideal)
-                            -0.5000   12.5000   clock uncertainty
-                             0.0000   12.5000   clock reconvergence pessimism
-                                      12.5000 ^ _52_/CLK (sky130_fd_sc_hd__dfxtp_1)
-                            -0.0596   12.4404   library setup time
-                                      12.4404   data required time
+                             2.0000   12.0000   clock network delay (ideal)
+                            -0.5000   11.5000   clock uncertainty
+                             0.0000   11.5000   clock reconvergence pessimism
+                                      11.5000 ^ _52_/CLK (sky130_fd_sc_hd__dfxtp_1)
+                            -0.0596   11.4404   library setup time
+                                      11.4404   data required time
 ------------------------------------------------------------------------------------
-                                      12.4404   data required time
-                                      -8.8356   data arrival time
+                                      11.4404   data required time
+                                      -5.8356   data arrival time
 ------------------------------------------------------------------------------------
-                                       3.6048   slack (MET)
+                                       5.6048   slack (MET)
 
 
