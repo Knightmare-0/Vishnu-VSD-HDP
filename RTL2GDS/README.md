@@ -42,3 +42,13 @@ endmodule
 
 **NOTE :** _RTL Simulation is the same as Netlist Simulation_
 
+## STA Analysis
+
+~~~
+X Axis : ss/ff/tt libraries
+Y Axis : Worst Slack
+~~~
+![STA](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/afe26354-b069-4323-830d-c186d316eced)
+
+
+
