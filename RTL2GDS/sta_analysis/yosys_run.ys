@@ -1,0 +1,8 @@
+read_liberty -lib lib/sky130_fd_sc_hd__tt_100C_1v80.lib
+read_verilog bidcounter.v 
+synth -top bidcounter
+dfflibmap -liberty lib/sky130_fd_sc_hd__tt_100C_1v80.lib
+opt -purge 
+abc -liberty lib/sky130_fd_sc_hd__tt_100C_1v80.lib
+write_verilog -noattr bidcounter_tt_100C_1v80.v
+

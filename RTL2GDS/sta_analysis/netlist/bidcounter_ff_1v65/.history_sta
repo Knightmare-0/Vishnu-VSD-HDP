@@ -1,0 +1,30 @@
+read_verilog bidcounter_ff_1v65.v 
+read_liberty ../../lib/sky130_fd_sc_hd__ff_100C_1v65.lib 
+link_design bidcounter
+read_sdc contraint.tcl 
+report checks
+report_checks
+exit
+exir
+!gedit sta.tcl
+exit
+sta
+read_liberty ../../lib/sky130_fd_sc_hd__ff_100C_1v65.lib
+exit
+exit
+exit
+exit
+exit
+exit
+ls
+exit
+exit
+exit
+exit
+exit
+exit
+exit
+exit
+exit
+exit
+exit
