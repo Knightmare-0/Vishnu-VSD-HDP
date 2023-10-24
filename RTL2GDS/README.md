@@ -53,6 +53,8 @@ Y Axis : Worst Slack
 ~~~
 Library used : sky130_fd_sc_hd__tt_025C_1v80
 Wost Slack : 5.6222
+
+Clock Frequency : 209.2925 MHz
 ~~~
 
 
