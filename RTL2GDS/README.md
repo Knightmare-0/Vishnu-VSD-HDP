@@ -50,5 +50,9 @@ Y Axis : Worst Slack
 ~~~
 ![STA](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/afe26354-b069-4323-830d-c186d316eced)
 
+~~~
+Library used : sky130_fd_sc_hd__tt_025C_1v80
+Wost Slack : 5.6222
+~~~
 
 
