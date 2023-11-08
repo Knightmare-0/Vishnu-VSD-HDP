@@ -52,3 +52,11 @@ Fall Time = 0.28 ns
 | Wp/Lp  |4 x Wn/Ln  |45ps        |84ps        |1.35V |
 | Wp/Lp  |5 x Wn/Ln  |37ps        |88ps        |1.4V  |
 
+> [!NOTE]
+> Wp/Lp = 2 x Wn/Ln <br>
+> rise time = fall time <br>
+> Symmetrical Transient Output <br>
+> Use a small rise delay cell in the data path <br>
+> Use a large rise delay cell in the clock path <br>
+
+> 
