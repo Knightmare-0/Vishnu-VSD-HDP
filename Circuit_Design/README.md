@@ -2,6 +2,10 @@
 
 ## Velocity Saturation
 
+At high electric fields, the average velocity of carriers is
+NOT proportional to the field, it saturates at ~107 cm/sec
+for both electrons and holes
+
 > [!NOTE]
 > Channel length below 250nm is considered short channel
 
