@@ -24,10 +24,10 @@ for both electrons and holes
 
 ## CMOS Inverter
 
-Typical Voltage Transfer Characteristics 
+### Typical Voltage Transfer Characteristics 
 ![image](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/7ce54da2-6b58-40fb-83e4-d87e5a39fd83)
 
-Vout vs Vin Plot for a MOSFET with (w/l) <sub> n </sub> = 36u/15u , (w/l) <sub> p </sub> = 0.84u/0.15u 
+### Vout vs Vin Plot for a MOSFET with (w/l) <sub> n </sub> = 36u/15u , (w/l) <sub> p </sub> = 0.84u/0.15u 
 ![inv_vtc](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/d0db44e1-6b30-4381-96c3-459fc14a4db1)
 
 ```
