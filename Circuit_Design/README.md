@@ -34,6 +34,16 @@ for both electrons and holes
 Switching Threshold =  8.77 V
 ```
 
+### Transient Analysis
+![transient_plot](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/35543c5d-7975-43b7-8b05-11f7fc2e7b29)
+
+```
+Rise Time = 0.33 ns
+Fall Time = 0.28 ns
+```
+
+
+
 
 
 
