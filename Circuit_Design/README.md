@@ -44,7 +44,7 @@ Fall Time = 0.28 ns
 
 ### Channel Dependency of PMOS and NMOS
 
-| PMOS  | NMOS  | Rise Delay | Fall Delay |Vm    |
+| PMOS   | NMOS      | Rise Delay | Fall Delay |Vm    |
 |--------|-----------|------------|------------|------|
 | Wp/Wp  |1 x Wn/Wn  |148ps       |71ps        |0.99V |
 | Wp/Wp  |2 x Wn/Wn  |80ps        |76ps        |1.2V  |
