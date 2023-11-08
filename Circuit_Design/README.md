@@ -46,9 +46,9 @@ Fall Time = 0.28 ns
 
 | PMOS   | NMOS      | Rise Delay | Fall Delay |Vm    |
 |--------|-----------|------------|------------|------|
-| Wp/Wp  |1 x Wn/Wn  |148ps       |71ps        |0.99V |
-| Wp/Wp  |2 x Wn/Wn  |80ps        |76ps        |1.2V  |
-| Wp/Wp  |3 x Wn/Wn  |57ps        |80ps        |1.25V |
-| Wp/Wp  |4 x Wn/Wn  |45ps        |84ps        |1.35V |
-| Wp/Wp  |5 x Wn/Wn  |37ps        |88ps        |1.4V  |
+| Wp/Lp  |1 x Wn/Ln  |148ps       |71ps        |0.99V |
+| Wp/Lp  |2 x Wn/Ln  |80ps        |76ps        |1.2V  |
+| Wp/Lp  |3 x Wn/Ln  |57ps        |80ps        |1.25V |
+| Wp/Lp  |4 x Wn/Ln  |45ps        |84ps        |1.35V |
+| Wp/Lp  |5 x Wn/Ln  |37ps        |88ps        |1.4V  |
 
