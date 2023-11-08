@@ -3,7 +3,7 @@
 ## Velocity Saturation
 
 At high electric fields, the average velocity of carriers is
-NOT proportional to the field, it saturates at ~10<sup>7</sup> cm/sec
+NOT proportional to the field, it saturates at ~10 <sup> 7 </sup> cm/sec
 for both electrons and holes
 
 > [!NOTE]
