@@ -84,6 +84,7 @@ Switching Threshold = 0.88V
 <p>
   Robustness of a CMOS Inverter
 </p>
+
 | PMOS   | NMOS      | NM <sub> H </sub>| NM <sub> L</sub> |Vm    |
 |--------|-----------|------------------|------------------|------|
 | Wp/Lp  |1 x Wn/Ln  |0.3V              |0.3V              |0.99V |
