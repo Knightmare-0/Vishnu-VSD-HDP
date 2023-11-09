@@ -59,4 +59,17 @@ Fall Time = 0.28 ns
 > Use a small rise delay cell in the data path <br>
 > Use a large rise delay cell in the clock path <br>
 
-> 
+### Noise Margin
+
+<p>
+  Noise margin is the amount of noise that a CMOS circuit can withstand without compromising the operation of the circuit
+</p>
+
+```
+NMh = V <sub> oh </sub> - V <sub> ih </sub>
+NMl = V <sub> il </sub> - V <sub> ol </sub>
+```
+
+
+
+
