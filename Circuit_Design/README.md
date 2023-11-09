@@ -65,10 +65,42 @@ Fall Time = 0.28 ns
   Noise margin is the amount of noise that a CMOS circuit can withstand without compromising the operation of the circuit
 </p>
 
+![image](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/ce9e127b-9cd7-4b0d-a1e1-b629a97815b4)
+
+
 ```
 NMh = Voh - Vih
 NMl = Vil - Vol
 ```
+<p>
+  Noise Margin For (W\L) <sub> p </sub> = 1u/0.15u and (W/L) <sub> n </sub> = 0.36u/0.15u using VTC
+</p>
+
+```
+NMh = 0.89380V
+NMl = 0.86299V
+Switching Threshold = 0.88V
+```
+<p>
+  Robustness of a CMOS Inverter
+</p>
+| PMOS   | NMOS      | NM <sub> H </sub>| NM <sub> L</sub> |Vm    |
+|--------|-----------|------------------|------------------|------|
+| Wp/Lp  |1 x Wn/Ln  |0.3V              |0.3V              |0.99V |
+| Wp/Lp  |2 x Wn/Ln  |0.35V             |0.3V              |1.2V  |
+| Wp/Lp  |3 x Wn/Ln  |0.4V              |0.3V              |1.25V |
+| Wp/Lp  |4 x Wn/Ln  |0.42V             |0.27V             |1.35V |
+| Wp/Lp  |5 x Wn/Ln  |0.42V             |0.27V             |1.4V  |
+
+
+
+
+
+
+
+
+
+
 
 
 
