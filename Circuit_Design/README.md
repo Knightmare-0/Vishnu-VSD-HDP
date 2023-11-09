@@ -97,11 +97,11 @@ Switching Threshold = 0.88V
 
 ![inv_power](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/42943061-90a0-4120-af0f-2211e22f8825)
 
-<p align="center">
+
 |Vdd  |1.8V |1.6|1.4|1.2|1|0.8|
 |-----|-----|---|---|---|-|---|
 |Gain |8.08|8.70|9.63|9.74|9.30|9.5| 
-</p>
+
 
 
 
