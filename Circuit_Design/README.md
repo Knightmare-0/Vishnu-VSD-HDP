@@ -66,8 +66,8 @@ Fall Time = 0.28 ns
 </p>
 
 ```
-NMh = V <sub> oh </sub> - V <sub> ih </sub>
-NMl = V <sub> il </sub> - V <sub> ol </sub>
+NMh = Voh - Vih
+NMl = Vil - Vol
 ```
 
 
