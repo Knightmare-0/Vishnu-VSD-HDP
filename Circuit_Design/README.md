@@ -31,7 +31,7 @@ for both electrons and holes
 ![inv_vtc](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/d0db44e1-6b30-4381-96c3-459fc14a4db1)
 
 ```
-Switching Threshold =  8.77 V
+Switching Threshold =  0.77 V
 ```
 
 ### Transient Analysis
