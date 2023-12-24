@@ -3,6 +3,7 @@
 
 ### OpenLane Start up
 ```
+make mount
 ./flow.tcl -interactive
 package require openlane 0.9
 prep -design picorv32a
