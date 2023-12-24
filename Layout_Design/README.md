@@ -16,6 +16,7 @@ run_synthesis
 #### Calculate Flop Ratio
 ```
 flop ratio = Total number of cells / Number of D Flipflops
+flop ratio = 9645 / 1596 = 6.04
 ```
 > [!NOTE]
 >  Cell information found in runs/reports/synthesis/1-synthesis.AREA_0.stat.rpt
