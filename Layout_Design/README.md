@@ -1,7 +1,5 @@
-# Tool Used : OpenLane
-# Design Used : Picorv32a
-
-### OpenLane Start up
+# Tool Used: OpenLane
+#### OpenLane Start up
 ```
 make mount
 ./flow.tcl -interactive
@@ -11,7 +9,8 @@ prep -design picorv32a
 
 
 # Day 1
-### Calculate Flop Ratio
+### Design Used: Picorv32a
+#### Calculate Flop Ratio
 ```
 flop ratio = Total number of cells / Number of D Flipflops
 ```
