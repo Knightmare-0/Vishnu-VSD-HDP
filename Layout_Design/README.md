@@ -17,4 +17,5 @@ run_synthesis
 ```
 flop ratio = Total number of cells / Number of D Flipflops
 ```
-> [!NOTE] Cell information found in 1-synthesis.AREA_0.stat.rpt
+> [!NOTE]
+>  Cell information found in 1-synthesis.AREA_0.stat.rpt
