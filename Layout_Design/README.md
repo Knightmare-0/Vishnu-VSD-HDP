@@ -27,4 +27,5 @@ flop ratio = 9645 / 1596 = 6.04
 ### In config.tcl
 *Set metal layers [typically it is 1 more than what is specified]*</br>
 *Vertical metal in layer 4 and horizontal metal in layer 3* <br>
-*Set core utilisation factor*
+*Set core utilisation factor* </br>
+*Set core utilisation in dk_config.tcl which has the highest priority
