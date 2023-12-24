@@ -1,7 +1,7 @@
 # Tool Used : OpenLane
 # Design Used : Picorv32a
 
-## OpenLane Start up
+### OpenLane Start up
 ```
 ./flow.tcl -interactive
 package require openlane 0.9
