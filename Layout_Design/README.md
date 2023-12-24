@@ -8,7 +8,9 @@ prep -design picorv32a
 ```
 #### OpenLane Commands
 ```
-run_synthesis    
+run_synthesis
+run_floorplan
+run_placement
 ```
 
 # Day 1
@@ -24,8 +26,18 @@ flop ratio = 9645 / 1596 = 6.04
 ### Floorplan
 
 *Configuration priority System defaults in configuration folder floorplan.tcl < config.tcl < pdk_config.tcl* </br>
-### In config.tcl
+#### In config.tcl
 *Set metal layers [typically it is 1 more than what is specified]*</br>
 *Vertical metal in layer 4 and horizontal metal in layer 3* <br>
 *Set core utilisation factor* </br>
 *Set core utilisation in dk_config.tcl which has the highest priority*
+*Overflow decreases implies design converges, which is good*
+
+#### Command To Launch Magic
+```
+magic -T /home/knightmare/lib/sky130A/libs.tech/magic/sky130A.tech lef read cd ../../tmp/merged.min.lef def read picorv32.def 
+```
+
+### Placement
+
+
