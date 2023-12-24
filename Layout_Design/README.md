@@ -19,5 +19,12 @@ flop ratio = Total number of cells / Number of D Flipflops
 flop ratio = 9645 / 1596 = 6.04
 ```
 > [!NOTE]
->  Cell information found in runs/reports/synthesis/1-synthesis.AREA_0.stat.rpt </br>
-> Configuration priority System defaults in configuration folder floorplan.tcl < config.tcl < pdk_config.tcl
+> Cell information found in runs/reports/synthesis/1-synthesis.AREA_0.stat.rpt </br>
+
+### Floorplan
+
+*Configuration priority System defaults in configuration folder floorplan.tcl < config.tcl < pdk_config.tcl* </br>
+### In config.tcl
+*Set metal layers [typically it is 1 more than what is specified]*
+*Vertical metal in layer 4 and horizontal metal in layer 3* <br>
+*Set core utilisation factor*
