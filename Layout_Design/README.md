@@ -6,7 +6,7 @@ make mount
 package require openlane 0.9
 prep -design picorv32a
 ```
-#### OpenLane Commanda
+#### OpenLane Commands
 ```
 run_synthesis    
 ```
@@ -17,3 +17,4 @@ run_synthesis
 ```
 flop ratio = Total number of cells / Number of D Flipflops
 ```
+!NOTE Cell information found in 1-synthesis.AREA_0.stat.rpt
