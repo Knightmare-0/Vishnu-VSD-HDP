@@ -31,7 +31,7 @@ flop ratio = 9645 / 1596 = 6.04
 *Vertical metal in layer 4 and horizontal metal in layer 3* <br>
 *Set core utilisation factor* </br>
 *Set core utilisation in dk_config.tcl which has the highest priority*
-*Overflow decreases implies design converges, which is good*
+
 
 #### Command To Launch Magic
 ```
@@ -39,5 +39,6 @@ magic -T /home/knightmare/lib/sky130A/libs.tech/magic/sky130A.tech lef read cd .
 ```
 
 ### Placement
+*Overflow decreases implies design converges, which is good* </br>
 
 
