@@ -6,7 +6,10 @@ make mount
 package require openlane 0.9
 prep -design picorv32a
 ```
-
+#### OpenLane Commanda
+```
+run_synthesis    
+```
 
 # Day 1
 ### Design Used: Picorv32a
