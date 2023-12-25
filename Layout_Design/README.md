@@ -105,6 +105,12 @@ Cell Characterization
 |------------|-----------|------------|-----------------------|
 |0.044 ns    |0.02ns     |   0.027ns  |  0.003ns              |
 
+> [!NOTE]
+> Input and output ports must lie on the intersection of the horizontal and vertical tracks
+> The width of the standard cell must be in the odd multiple of the track's horizontal pitch
+> The height of the standard cell must be in the odd multiple of the track's vertical pitch
+
+
 
 
 
