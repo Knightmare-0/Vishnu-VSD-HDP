@@ -109,7 +109,11 @@ Cell Characterization
 > Input and output ports must lie on the intersection of the horizontal and vertical tracks </br>
 > The width of the standard cell must be in the odd multiple of the track's horizontal pitch </br>
 > The height of the standard cell must be in the odd multiple of the track's vertical pitch </br>
-
+#### Step 4
+Generate LEF file from magic tkcon window
+```
+write lef
+```
 
 
 
