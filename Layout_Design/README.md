@@ -58,6 +58,53 @@ Extract spice files from tkcon window
 % ext2spice cthresh 0 rthresh 0
 % ext2spice
 ```
+#### Step 3
+Modify the spice file to run the simulation
+```
+* SPICE3 file created from sky130_inv.ext - technology: sky130A
+
+.option scale=0.01u
+.include ./libs/pshort.lib
+.include ./libs/nshort.lib
+
+//.subckt sky130_inv A Y VPWR VGND
+M1000 Y A VGND VGND nshort_model.0 w=35 l=23
++  ad=1.435n pd=0.152m as=1.365n ps=0.148m
+M1001 Y A VPWR VPWR pshort_model.0 w=37 l=23
++  ad=1.443n pd=0.152m as=1.517n ps=0.156m
+
+VDD VPWR 0 3.3V
+VSS VGND 0 0V
+Va A VGND PULSE(0V 3.3V 0 0.1ns 0.1ns 2ns 4ns)
+
+C0 VPWR Y 0.11654f
+C1 VPWR A 0.077431f
+C2 Y A 0.075353f
+C3 Y VGND 0.2f
+C4 A VGND 0.45021f
+C5 VPWR VGND 0.781009f
+//.ends
+
+.tran 1n 20n
+
+.control
+run
+.endc
+.end
+```
+plot in NgSpice 
+```
+plot y vs time a
+```
+
+Inverter Transient Waveform
+![layout spice sim](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/e7b39bc8-e181-43d9-b250-10b365e552f6)
+
+Cell Characterization
+
+
+
+
 
 
 
