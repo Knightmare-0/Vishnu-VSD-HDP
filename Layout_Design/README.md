@@ -41,4 +41,22 @@ magic -T /home/knightmare/lib/sky130A/libs.tech/magic/sky130A.tech lef read cd .
 ### Placement
 *Overflow decreases implies design converges, which is good* </br>
 
+# Day 2
+### Custom Standard Cell Layout and Spice Extraction
+
+#### Step 1
+Launch the mag file and tech file on magic
+```
+magic -T libs/sky130A.tech sky130_inv.mag 
+```
+![Inverter Layout](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/691e3a07-46a1-41c9-9c83-d1502286d6e6)
+
+Extract spice files from tkcon window
+```
+% extract all
+% ext2spice cthresh 0 rthresh 0
+% ext2spice
+```
+
+
 
