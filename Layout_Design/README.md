@@ -100,11 +100,12 @@ plot y vs time a
 Inverter Transient Waveform
 ![layout spice sim](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/e7b39bc8-e181-43d9-b250-10b365e552f6)
 
+<center>
 Cell Characterization
 | Raise Time | Fall Time | Cell Delay |
 |------------|-----------|------------|
 |0.044 ns    |0.02ns     |   0.027ns  |
-
+</center>
 
 
 
