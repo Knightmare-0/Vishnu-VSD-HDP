@@ -51,6 +51,7 @@ magic -T libs/sky130A.tech sky130_inv.mag
 ```
 ![Inverter Layout](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/691e3a07-46a1-41c9-9c83-d1502286d6e6)
 
+#### Step 2
 Extract spice files from tkcon window
 ```
 % extract all
