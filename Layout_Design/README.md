@@ -11,6 +11,17 @@ prep -design picorv32a
 run_synthesis
 run_floorplan
 run_placement
+run_cts
+gen_pdn
+run_routing
+run_parasitics_sta
+run_irdrop_report
+run_magic
+run_magic_spice_export
+run_lvs
+run_magic_drc
+run_antenna_check
+run_erc
 ```
 
 # Day 1
