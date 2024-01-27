@@ -184,6 +184,7 @@ magic read -T /home/knightmare/.volare/sky130A/libs.tech/magic/sky130A.tech lef 
  2. SYNTH_BUFFERING : Enable buffering for cells with high fanout </br>
  3. SYNTH_SIZING : Enabes upsizing or downsizing the buffers </br>
  4. SYNTH_DRIVING_CELL : Cell that drives the input port (sky130_fd_sc_hd__inv_2 -> sky130_fd_sc_hd__inv_8) </br>
+ 5. SYNTH_MAX_FANOUT : Reduce max fanout to reduce output capacitance </br>
 </p>
 
 ```
@@ -201,6 +202,8 @@ AREA 0
 sky130_fd_sc_hd__inv_2
 % set ::env(SYNTH_DRIVING_CELL) sky130_fd_sc_hd__inv_8
 sky130_fd_sc_hd__inv_8
+% set ::env(SYNTH_MAX_FANOUT) 4
+4
 ```
 
 
