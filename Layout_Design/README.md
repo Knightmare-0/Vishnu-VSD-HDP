@@ -175,7 +175,8 @@ magic read -T /home/knightmare/.volare/sky130A/libs.tech/magic/sky130A.tech lef 
 ```
 |Placement Result | Inverter Placement |
 |-----------------|-------------------|
-|![image](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/c60cbde3-af14-46dd-b38c-a42b43ce13b7)|![image](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/feff235f-3a8b-477a-92bd-3b8e7f14e3fb)|
+|![image](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/c60cbde3-af14-46dd-b38c-a42b43ce13b7)|![image](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/95df0160-4673-4dd9-b118-faf5bfe5a409)|
+
 
 
 
