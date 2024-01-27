@@ -132,16 +132,17 @@ Generate LEF file from magic tkcon window
 write lef
 ```
 <p>
-Copy 4 Files generated to the picorv32a src folder  
+Copy 4 Files generated to the picorv32a src folder  </br>
 1. sky130_inverter.lef </br>
-2. sky130_fd_sc_hd__fast.lib
-3. sky130_fd_sc_hd__slow.lib
-4. sky130_fd_sc_hd__typical.lib
+2. sky130_fd_sc_hd__fast.lib</br>
+3. sky130_fd_sc_hd__slow.lib</br>
+4. sky130_fd_sc_hd__typical.lib</br>
 </p>
 <p>
-  Use the following command to map the 4 files in the config.json 
-  config.json Location :  /home/knightmare/OpenLane/designs/picorv32a
+  Use the following command to map the 4 files in the config.json </br>
+  config.json Location :  /home/knightmare/OpenLane/designs/picorv32a</br>
 </p>
+
 ```
     "LIB_SYNTH": "/home/knightmare/OpenLane/designs/picorv32a/src/sky130_fd_sc_hd__typical.lib",
     "LIB_SLOWEST": "/home/knightmare/OpenLane/designs/picorv32a/src/sky130_fd_sc_hd__slow.lib",
