@@ -152,9 +152,9 @@ Copy 4 Files generated to the picorv32a src folder  </br>
 ```
 
 #### Step 5
-> Invoke openlane and load the design
-> set the new lef file to the design
-> add the new lef file to the source
+> Invoke openlane and load the design </br>
+> set the new lef file to the design </br>
+> add the new lef file to the source </br>
 
 ```
 prep -design picorv32a
