@@ -185,6 +185,7 @@ magic read -T /home/knightmare/.volare/sky130A/libs.tech/magic/sky130A.tech lef 
  3. SYNTH_SIZING : Enabes upsizing or downsizing the buffers </br>
  4. SYNTH_DRIVING_CELL : Cell that drives the input port (sky130_fd_sc_hd__inv_2 -> sky130_fd_sc_hd__inv_8) </br>
 </p>
+
 ```
 % echo $::env(SYNTH_STRATEGY)
 AREA 0
