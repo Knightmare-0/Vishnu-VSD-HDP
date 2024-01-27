@@ -24,6 +24,12 @@ run_antenna_check
 run_erc
 ```
 
+#### Open PDKs
+```
+ git clone git://opencircuitdesign.com/open_pdks
+```
+
+
 # Day 1
 ### Design Used: Picorv32a
 #### Calculate Flop Ratio
@@ -125,6 +131,25 @@ Generate LEF file from magic tkcon window
 ```
 write lef
 ```
+<p>
+Copy 4 Files generated to the picorv32a src folder  
+1. sky130_inverter.lef </br>
+2. sky130_fd_sc_hd__fast.lib
+3. sky130_fd_sc_hd__slow.lib
+4. sky130_fd_sc_hd__typical.lib
+</p>
+<p>
+  Use the following command to map the 4 files in the config.json 
+  config.json Location :  /home/knightmare/OpenLane/designs/picorv32a
+</p>
+```
+    "LIB_SYNTH": "/home/knightmare/OpenLane/designs/picorv32a/src/sky130_fd_sc_hd__typical.lib",
+    "LIB_SLOWEST": "/home/knightmare/OpenLane/designs/picorv32a/src/sky130_fd_sc_hd__slow.lib",
+    "LIB_FASTEST": "/home/knightmare/OpenLane/designs/picorv32a/src/sky130_fd_sc_hd__fast.lib",
+    "LIB_TYPICAL": "/home/knightmare/OpenLane/designs/picorv32a/src/sky130_fd_sc_hd__typical.lib",
+    "EXTRA_LEFS": "/home/knightmare/OpenLane/designs/picorv32a/src/sky130_inverter.lef",
+```
+
 
 
 
