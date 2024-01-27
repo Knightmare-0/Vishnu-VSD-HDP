@@ -144,11 +144,11 @@ Copy 4 Files generated to the picorv32a src folder  </br>
 </p>
 
 ```
-    "LIB_SYNTH": "/home/knightmare/OpenLane/designs/picorv32a/src/sky130_fd_sc_hd__typical.lib",
-    "LIB_SLOWEST": "/home/knightmare/OpenLane/designs/picorv32a/src/sky130_fd_sc_hd__slow.lib",
-    "LIB_FASTEST": "/home/knightmare/OpenLane/designs/picorv32a/src/sky130_fd_sc_hd__fast.lib",
-    "LIB_TYPICAL": "/home/knightmare/OpenLane/designs/picorv32a/src/sky130_fd_sc_hd__typical.lib",
-    "EXTRA_LEFS": "/home/knightmare/OpenLane/designs/picorv32a/src/sky130_inverter.lef",
+"LIB_SYNTH": "/home/knightmare/OpenLane/designs/picorv32a/src/sky130_fd_sc_hd__typical.lib",
+"LIB_SLOWEST": "/home/knightmare/OpenLane/designs/picorv32a/src/sky130_fd_sc_hd__slow.lib",
+"LIB_FASTEST": "/home/knightmare/OpenLane/designs/picorv32a/src/sky130_fd_sc_hd__fast.lib",
+"LIB_TYPICAL": "/home/knightmare/OpenLane/designs/picorv32a/src/sky130_fd_sc_hd__typical.lib",
+"EXTRA_LEFS": "/home/knightmare/OpenLane/designs/picorv32a/src/sky130_inverter.lef",
 ```
 
 
