@@ -175,7 +175,32 @@ magic read -T /home/knightmare/.volare/sky130A/libs.tech/magic/sky130A.tech lef 
 ```
 |Placement Result | Inverter Placement |
 |-----------------|-------------------|
-|![image](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/c60cbde3-af14-46dd-b38c-a42b43ce13b7)|![image](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/95df0160-4673-4dd9-b118-faf5bfe5a409)|
+|![image](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/c60cbde3-af14-46dd-b38c-a42b43ce13b7)|![image](https://github.com/Knightmare-0/Vishnu-VSD-HDP/assets/112769624/d116fc3e-cba6-4178-bc34-6c99c67bda8c)|
+
+<p>
+ In case of any Slack violations </br>
+ Modify the environment variable to solve the issue </br>
+ 1. SYNTH_STRATEGY : Increasing this synthesises the design to a bigger area </br>
+ 2. SYNTH_BUFFERING : Enable buffering for cells with high fanout </br>
+ 3. SYNTH_SIZING : Enabes upsizing or downsizing the buffers </br>
+ 4. SYNTH_DRIVING_CELL : Cell that drives the input port (sky130_fd_sc_hd__inv_2 -> sky130_fd_sc_hd__inv_8) </br>
+</p>
+```
+% echo $::env(SYNTH_STRATEGY)
+AREA 0
+% set ::env(SYNTH_STRATEGY) 1
+1
+% echo $::env(SYNTH_BUFFERING)  
+1
+% echo $::env(SYNTH_SIZING)
+0
+% set ::env(SYNTH_SIZING) 1
+1
+% echo $::env(SYNTH_DRIVING_CELL)
+sky130_fd_sc_hd__inv_2
+% set ::env(SYNTH_DRIVING_CELL) sky130_fd_sc_hd__inv_8
+sky130_fd_sc_hd__inv_8
+```
 
 
 
