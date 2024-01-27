@@ -129,7 +129,7 @@ Cell Characterization
 #### Step 4
 Generate LEF file from magic tkcon window
 ```
-write lef
+write lef sky130_inverter.lef
 ```
 <p>
 Copy 4 Files generated to the picorv32a src folder  </br>
@@ -150,6 +150,21 @@ Copy 4 Files generated to the picorv32a src folder  </br>
 "LIB_TYPICAL": "/home/knightmare/OpenLane/designs/picorv32a/src/sky130_fd_sc_hd__typical.lib",
 "EXTRA_LEFS": "/home/knightmare/OpenLane/designs/picorv32a/src/sky130_inverter.lef",
 ```
+
+#### Step 5
+> Invoke openlane and load the design
+> set the new lef file to the design
+> add the new lef file to the source
+
+```
+prep -design picorv32a
+set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
+add_lefs -src $lefs
+run_synthesis
+run_floorplan
+run_placement
+```
+
 
 
 
